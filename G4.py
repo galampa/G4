@@ -36,13 +36,7 @@ def get_best_K(coin, fees) :
             max_crr = crr
             best_K = k
     return best_K
-##################
-def get_ma15(ticker):
-    """15일 이동 평균선 조회"""
-    df = pyupbit.get_ohlcv(ticker, interval="day", count=15)
-    ma15 = df['close'].rolling(15).mean().iloc[-1]
-    return ma15
-#################
+
 if __name__ == '__main__': 
     try:
         access = "a"          # 본인 값으로 변경
